@@ -247,22 +247,29 @@
     const PRODUCTS = [
       {
         id: 'honey-jar',
-        name: 'Organic Honey Jar',
-        price: 15,
+        name: 'Organic Honey Jar 1Kg',
+        price: 1000,
         img: 'https://images.unsplash.com/photo-1517685352821-92cf88aee5a5?q=80&w=1600&auto=format&fit=crop',
         desc: 'Raw, unfiltered honey. 500g of pure golden goodness.'
       },
       {
         id: 'honeycomb',
-        name: 'Honeycomb',
-        price: 20,
+        name: 'Organic Honey Jar 500g',
+        price: 450,
         img: 'https://images.unsplash.com/photo-1536072835410-1b1ae3a56b0c?q=80&w=1600&auto=format&fit=crop',
         desc: 'Edible honeycomb straight from the hive. Crunchy & sweet.'
       },
       {
         id: 'flavored-honey',
-        name: 'Flavored Honey',
-        price: 18,
+        name: 'Organic Honey Jar 250g',
+        price: 300,
+        img: 'https://images.unsplash.com/photo-1604908554039-45275b499c67?q=80&w=1600&auto=format&fit=crop',
+        desc: 'Infused with natural flavors (lemon, ginger, cinnamon). 300g.'
+      },
+      {
+        id: 'flavored-honey1',
+        name: 'Organic Honey Jar 100g',
+        price: 100,
         img: 'https://images.unsplash.com/photo-1604908554039-45275b499c67?q=80&w=1600&auto=format&fit=crop',
         desc: 'Infused with natural flavors (lemon, ginger, cinnamon). 300g.'
       }
@@ -271,7 +278,7 @@
     // ---------- HELPERS ----------
     const $ = (sel, root=document) => root.querySelector(sel);
     const $$ = (sel, root=document) => Array.from(root.querySelectorAll(sel));
-    const fmt = (n) => `$${n.toFixed(2)}`;
+    const fmt = (n) => `Ksh ${n.toFixed(2)}`;
 
     function waLink(message){
       const encoded = encodeURIComponent(message);
@@ -288,7 +295,7 @@
       return [
         `Hello Emmanuel, my name is ${customerName}. I'd like to order:`,
         ...lines,
-        `Total: $${total.toFixed(2)}`
+        `Total: Ksh ${total.toFixed(2)}`
       ].join('\n');
     }
 
